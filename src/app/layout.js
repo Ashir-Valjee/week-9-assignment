@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subset: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
