@@ -1,13 +1,10 @@
-// connection with db
-// auth and user id
-// form to collect users profile data
-// sql query to insert users data into database
-// redirect user to homepage once they submit profile form
+import { SignIn } from "@clerk/nextjs";
 
-export default function SignInPage() {
+export default async function SignInPage() {
   return (
     <>
-      <h1>posts page</h1>
+      <h1>Sign-in to the most wonderful website in the world</h1>
+      <SignIn />
     </>
   );
 }
