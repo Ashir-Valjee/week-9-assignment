@@ -61,7 +61,7 @@ export default async function PostsPage() {
     WHERE follows.following_clerk_id ='${user.id}'`
   );
   const myExtraData = extraData.rows;
-  console.log(myExtraData[0].id);
+  // console.log(myExtraData[0].id);
 
   return (
     <>
