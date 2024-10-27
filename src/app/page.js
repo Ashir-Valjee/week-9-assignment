@@ -23,7 +23,6 @@ export default async function Homepage() {
           quality={100}
           className={styles.backgroundImage}
         />
-        <h1>A website about chess games</h1>
       </div>
     </>
   );
