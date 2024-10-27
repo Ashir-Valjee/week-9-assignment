@@ -10,6 +10,7 @@ import {
 
 //we are going to import auth() to have access to authentication credentails from the user
 import { auth } from "@clerk/nextjs/server";
+import NavBar from "./NavBar";
 
 export default function Header() {
   //we can destructure the userId from clerk auth
@@ -19,15 +20,20 @@ export default function Header() {
   return (
     <>
       {/* when the user is signed in, i will show the user button */}
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
-      {/* we only want to show the SignInButton and SignUpButton when the user is
+      <div className="bg-amber-300">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        {/* we only want to show the SignInButton and SignUpButton when the user is
       signed out */}
-      <SignedOut>
-        <SignInButton mode="modal">Sign In</SignInButton>
-        <SignUpButton mode="modal">Sign Up</SignUpButton>
-      </SignedOut>
+        <SignedOut>
+          <SignInButton mode="modal">Sign In</SignInButton>
+          <SignUpButton mode="modal">Sign Up</SignUpButton>
+        </SignedOut>
+        <h1 className="font-bold text-red-950 text-2xl">Welcome to TESN</h1>
+
+        <NavBar />
+      </div>
     </>
   );
 }

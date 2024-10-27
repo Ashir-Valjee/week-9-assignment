@@ -1,9 +1,12 @@
 import { auth, currentUser } from "@clerk/nextjs/server";
+import Image from "next/image";
+import background1 from "@/../public/background1.png";
+import styles from "@/app/homepage.module.css";
 
 export default async function Homepage() {
-  const { userId } = await auth();
+  // const { userId } = await auth();
 
-  const user = await currentUser();
+  // const user = await currentUser();
   // console.log(user);
   // console.log(user.firstName);
   // console.log(user.lastName);
@@ -11,12 +14,17 @@ export default async function Homepage() {
 
   return (
     <>
-      <h1>homepage</h1>
-      {/* <p>{user?.id}</p>
-      <p>{user?.firstName}</p>
-      <p>{user?.lastName}</p>
-      <p>{user?.emailAddresses[0].emailAddress}</p>
-      <p>{user?.username}</p> */}
+      <div className={styles.container}>
+        <Image
+          alt="background image"
+          src={background1}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className={styles.backgroundImage}
+        />
+        <h1>A website about chess games</h1>
+      </div>
     </>
   );
 }
