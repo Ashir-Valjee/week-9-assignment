@@ -81,17 +81,17 @@ export default async function PostsPage() {
         <section className="flex flex-col items-center justify-center ">
           <div className="max-w-xs min-w-72 border-4 border-green-700 p-4 rounded-lg bg-green-50">
             <h2>
-              welcome {data.first_name} {data.last_name}
+              welcome {data?.first_name} {data?.last_name}
             </h2>
             <Image
-              alt={data.username}
-              src={data.image_src}
+              alt={data?.username}
+              src={data?.image_src}
               width={300}
               height={300}
               className=" border-green-800 border-4 rounded-2xl"
             />
-            <p>username&#58; {data.username}</p>
-            <p>bio&#58; {data.bio} </p>
+            <p>username&#58; {data?.username}</p>
+            <p>bio&#58; {data?.bio} </p>
           </div>
         </section>
         <div className="flex flex-row items-center justify-center max-w-xs min-w-72 border-2 border-green-700 p-1 rounded-lg bg-red-50">
